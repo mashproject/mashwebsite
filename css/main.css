@@ -609,9 +609,9 @@ ul.nostyle i {
 }
 #meet-team .social-icons > li > a {
   display: block;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
   color: #fff;
   background: #222534;
@@ -928,9 +928,7 @@ ul.nostyle i {
   margin: 0 7.5px;
 }
 @media only screen and (min-width: 768px) {
-  #footer .social-icons {
-    float: right;
-  }
+
 }
 .form-control {
   box-shadow: none;
