@@ -1018,3 +1018,31 @@ section#contact .text-danger {
 section#contact .btn{
     margin-bottom: 10px;
 }
+
+/*------------------------------------logo------------------------------------------------*/
+.navbar-brand img {
+    height: 60px;
+}
+
+
+/*----------------------------------------------------internships---------------------------------------------------------*/
+
+#internships .thumbnail{
+    background-color: #2a95be;
+}
+
+#internships .caption{
+    background-color: #fff;
+    padding:0 0 10px 0;
+}
+
+#internships .heading{
+    background-color: #2a95be;
+    margin:0;
+    padding: 10px;
+    color: #fff;
+}
+
+#internships .content{
+    padding: 10px;
+}
