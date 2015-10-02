@@ -618,8 +618,8 @@ ul.nostyle i {
   border-radius: 3px;
 }
 .divider {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   background-image: -moz-linear-gradient(180deg, #ffffff 0%, #e3e3e3 49%, #ffffff 100%);
   background-image: -webkit-linear-gradient(180deg, #ffffff 0%, #e3e3e3 49%, #ffffff 100%);
   background-image: -ms-linear-gradient(180deg, #ffffff 0%, #e3e3e3 49%, #ffffff 100%);
@@ -907,11 +907,16 @@ ul.nostyle i {
 ********* Footer ******
 ************************/
 #footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: #fff;
-  background: #2e2e2e;
+  background-image: url(../images/footer-bg.jpg)
 }
+.footer-heading{
+    text-decoration: underline;
+    font-size: 19px;
+}
+
 #footer a {
   color: #fff;
 }
@@ -921,17 +926,95 @@ ul.nostyle i {
 #footer ul {
   list-style: none;
   padding: 0;
-  margin: 0 -7.5px;
 }
+
+#footer .foot{
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
 #footer ul > li {
-  display: inline-block;
   margin: 0 7.5px;
 }
+#footer .social-icons > li{
+    display: inline-block;
+}
 @media only screen and (min-width: 768px) {
-
+ 
 }
 .form-control {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
 
+.form-horizontal{
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.form-horizontal .form-group{
+    margin: 7px 0 0 0;
+}
+
+/*========CONTACT========*/
+section#contact {
+
+}
+
+section#contact .form-group {
+    margin-bottom: 25px;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+    padding: 20px;
+}
+
+section#contact .form-group input.form-control {
+    height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+    height: 236px;
+}
+
+section#contact .form-control:focus {
+    border-color: #fed136;
+    box-shadow: none;
+}
+
+section#contact::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact:-moz-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact::-moz-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact .text-danger {
+    color: #e74c3c;
+}
+
+section#contact .btn{
+    margin-bottom: 10px;
+}
