@@ -223,7 +223,7 @@ ul.nostyle i {
 
 #portfolio {
   padding: 50px 0 0 0;
-  background: #f5f5f5;
+
 }
 #portfolio .portfolio-filter {
   list-style: none;
@@ -336,7 +336,8 @@ ul.nostyle i {
 
 }
 #meet-team {
-  padding: 100px 0;
+  padding: 50px 0;
+      background: #f5f5f5;
 }
 #meet-team .team-member {
   padding: 13px;
@@ -500,4 +501,8 @@ section#contact .text-danger {
 
 section#contact .btn{
     margin-bottom: 10px;
+}
+/*------------------------------------logo------------------------------------------------*/
+.navbar-brand img {
+    height: 60px;
 }
