@@ -13,7 +13,7 @@
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.transitions.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/team.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
     <link href="css/responsive.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -37,6 +37,11 @@
     <!--ninjaVideoPlugin.js is required only when the slider contains videos, and its link should be placed before the ninja-slider.js link.-->
     <script src="2/ninjaVideoPlugin.js" type="text/javascript"></script>
     <script src="2/ninja-slider.js" type="text/javascript"></script>
+    
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jssor.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
 </head><!--/head-->
 
 <body id="home" class="homepage">
@@ -56,12 +61,11 @@
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="index.html">Home</a></li>
+                        <li class="scroll active"><a href="index.html#home">Home</a></li>
                         <li class="scroll"><a href="index.html#about">About</a></li>
                         <li class="scroll"><a href="index.html#features">Projects</a></li>
                         <li class="scroll"><a href="index.html#services">Services</a></li>
                         <li class="scroll"><a href="index.html#portfolio">Events</a></li>                        
-                        <!-- <li class="scroll"><a href="#meet-team">Team</a></li> -->
                         <li class="scroll"><a href="index.html#campaigns">Campaigns</a></li>                         
                         <li class="scroll"><a href="index.html#get-in-touch">Contact us</a></li>                        
                     </ul>
@@ -70,101 +74,48 @@
         </nav><!--/nav-->
     </header><!--/header-->
 
-  
 
-    <section id="meet-team">
+    <section id="event_det">
         <div class="container">
+            
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Meet The Team</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <a href="#">
+                    <h2 class="section-title text-center wow fadeInDown">Open Dialogue</h2>
+                </a>
             </div>
-            <div id="portfolio">
-            <div class="text-center">
-                <ul class="portfolio-filter">
-                    <li><a class="active" href="#" data-filter="*">All Members</a></li>
-                    <li><a href="#" data-filter=".event">Events dep.</a></li>
-                    <li><a href="#" data-filter=".content">Content Dep.</a></li>
-                    <li><a href="#" data-filter=".tech">Tech Dep.</a></li>
-                </ul><!--/#portfolio-filter-->
+            
+            <div class="header-img text-center">
+                <img src="images/portfolio/02.jpg">   
             </div>
-
-            <div class="row portfolio-items">
-                <div class="col-sm-6 col-md-3 portfolio-item event">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="images/team/01.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Bin Burhan</h3>
-                            <span>Co-Founder</span>
-                        </div>
-                        <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 portfolio-item content">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="images/team/02.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Jane Man</h3>
-                            <span>Project Manager</span>
-                        </div>
-                        <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 portfolio-item tech">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="images/team/03.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Pahlwan</h3>
-                            <span>Designer</span>
-                        </div>
-                        <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 portfolio-item event">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="images/team/04.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Nasir uddin</h3>
-                            <span>UI/UX</span>
-                        </div>
-                        <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
+            
+            <div class="row">
+                <div class="col-md-12 text-center description">
+                    <p style="font-size:17px;">Date:</p>
+                    <p>MASH project organized its first on ground event, OPEN DIALOGUE in collaboration with Human Circle, an organisation which aims to bring together like-minded people driven by the motive of bringing about a change. The event, being an open forum discussion, aimed to bring students, social change makers and organisations to discuss, deliberate and find solutions to issues close to their hearts. After a very energetic and brainstorming session of Change makers, thinkers and revolutionaries gathered under a single roof, ready with their super ideas and transforming plans, we finally bid our good-byes with new friends, new ideas, the will to change, the hope to begin!</p>
                 </div>
             </div>
-</div>
-        </div>
-    </section>  
+            
+            <div id="cp_widget_e06b819b-6c08-4e8b-b344-5aaa383afae7">...</div>
+            <script type="text/javascript">
+                var cpo = []; 
+                cpo["_object"] ="cp_widget_e06b819b-6c08-4e8b-b344-5aaa383afae7"; 
+                cpo["_fid"] = "AEGAp9MsBtAG";
+                var _cpmp = _cpmp || []; 
+                _cpmp.push(cpo);
+                (function() { 
+                    var cp = document.createElement("script"); 
+                    cp.type = "text/javascript";
+                    cp.async = true; 
+                    cp.src = "http://www.cincopa.com/media-platform/runtime/libasync.js";
+                    var c = document.getElementsByTagName("script")[0];
+                    c.parentNode.insertBefore(cp, c); })(); 
+            </script>
+            <noscript>
+                Powered by Cincopa <a href='http://www.cincopa.com/video-hosting'>Video Hosting for Business</a> solution.<span>Mixer1</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 576</span><span>height</span><span> 842</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 2048</span><span>height</span><span> 1152</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 2048</span><span>height</span><span> 1519</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 128</span><span>height</span><span> 128</span></noscript>
+            
+        </div><!--container-->
+    </section>
+    
 
     <!--------------------------------------------FOOTER------------------------------------------>
     <footer id="footer">
@@ -173,11 +124,11 @@
 
             <div class="col-md-4 foot">
                          <ul class="text-center">
-                            <li><a href="team.html">Our team</a></li>
+                            <li><a href="team.html" target="_blank">Our team</a></li>
 
-                            <li><a href="contributors.html">Our Contributors</a></li>
+                            <li><a href="contributors.html" target="_blank">Our Contributors</a></li>
 
-                            <li><a href="http://goo.gl/U3Swie" target="_blank">Join</a></li>
+                            <li><a href="internship.html" target="_blank">Internship</a></li>
                             <div class="divider"></div>
 
 
@@ -273,8 +224,32 @@
         </div>
     </div>
 </footer>
+      <!-- Use the modals below to showcase details about your portfolio projects! -->
 
-
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body"> 
+            <!-- Project Details Go Here -->
+            <h2> <a href="https://www.facebook.com/events/677576728985782/" target="_blank">OPEN Dialogue</a></h2>
+              <div class="close-modal" data-dismiss="modal">
+      <button type="button" class="btn btn-primary close-btn" data-dismiss="modal"><i class="fa fa-times"></i></button>
+    </div>
+              <img src="http://www.mashglobal.org/img/open-dialogue.jpg" class="img-responsive" alt="">
+            <p>
+                MASH project organized its first on ground event, OPEN DIALOGUE in collaboration with Human Circle, an organisation which aims to bring together like-minded people driven by the motive of bringing about a change. The event, being an open forum discussion, aimed to bring students, social change makers and organisations to discuss, deliberate and find solutions to issues close to their hearts. After a very energetic and brainstorming session of Change makers, thinkers and revolutionaries gathered under a single roof, ready with their super ideas and transforming plans, we finally bid our good-byes with new friends, new ideas, the will to change, the hope to begin!
+                </p>
+              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     
