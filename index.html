@@ -415,7 +415,140 @@
                         </div>
                     </div><!--/.col-md-4-->
                 </div>
-            </div><!--/.row-->    
+            </div><!--/.row--> 
+            <div class="row">
+                <div class="col-md-offset-3 col-md-3">
+                    <div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Service Provider</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <form action="index.html" method="post">
+      
+            
+        <fieldset>
+          <input type="text" id="pname" name="user_name" placeholder="Name" required>
+          <input type="email" id="pmail" name="user_email" placeholder="Email" required>
+          <input type="tel" id="pcontact" name="user_contact" placeholder="Contact" required>
+        </fieldset>
+        
+        <fieldset>
+          <label>Services you can provide:</label>
+          <input type="checkbox" id="pmobile_app" value="service_mobile_app" name="provide_service"><label class="light">Mobile Application</label><br>
+            <input type="checkbox" id="pweb_design" value="service_web_design" name="provide_service"><label class="light">Website Design and Implementation</label><br>
+          <input type="checkbox" id="psocial_media" value="service_social_media" name="provide_service"><label class="light">Social Media Strategy and Implementation</label><br>
+            <input type="checkbox" id="pcontent" value="service_content" name="provide_service"><label class="light">Content</label><br>
+            <input type="checkbox" id="pdesign" value="service_design" name="provide_service"><label class="light">Design</label><br>
+          <input type="checkbox" id="pground_outreach" value="service_ground_outreach" name="provide_service"><label class="light">Ground Outreach</label>
+        </fieldset>
+              
+        <fieldset>
+          <label>Description:</label>
+          <textarea id="pdescrition" name="Descrition"></textarea>
+        </fieldset>
+        
+              <button class="button-form" type="submit">Sign Up</button>
+      </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+                <div class="col-md-3">
+                                   <div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Service Beneficiary</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <form action="index.html" method="post">
+      
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name">
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email">
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password">
+          
+          <label>Age:</label>
+          <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
+          <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label>
+        </fieldset>
+        
+        <fieldset>
+          <legend><span class="number">2</span>Your profile</legend>
+          <label for="bio">Biography:</label>
+          <textarea id="bio" name="user_bio"></textarea>
+        </fieldset>
+        <fieldset>
+        <label for="job">Job Role:</label>
+        <select id="job" name="user_job">
+          <optgroup label="Web">
+            <option value="frontend_developer">Front-End Developer</option>
+            <option value="php_developor">PHP Developer</option>
+            <option value="python_developer">Python Developer</option>
+            <option value="rails_developer"> Rails Developer</option>
+            <option value="web_designer">Web Designer</option>
+            <option value="WordPress_developer">WordPress Developer</option>
+          </optgroup>
+          <optgroup label="Mobile">
+            <option value="Android_developer">Androild Developer</option>
+            <option value="iOS_developer">iOS Developer</option>
+            <option value="mobile_designer">Mobile Designer</option>
+          </optgroup>
+          <optgroup label="Business">
+            <option value="business_owner">Business Owner</option>
+            <option value="freelancer">Freelancer</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option value="secretary">Secretary</option>
+            <option value="maintenance">Maintenance</option>
+          </optgroup>
+        </select>
+        
+          <label>Interests:</label>
+          <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
+            <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label><br>
+          <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label>
+        
+        </fieldset>
+        <button type="submit">Sign Up</button>
+      </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+        </div>                
         </div><!--/.container-->
     </section><!--/#services-->    
 
@@ -860,96 +993,7 @@
         </div>
     </section>
 
-    <!--------------------------------------------INTERNSHIPS------------------------------------------>
-    <section id="internships">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-center">Internship<br><small>Looking for a window to expand your ideas?</small></h2>
-                <p class="text-center">MASH Project is open for all eager minds, be it a beginner or a master in any field. Check out our sections available for Internship and choose the one which excites you! 
-                <br>For the Experienced ones, if you have any suggestions or believe you can contribute to us in your own way. Please visit our <a href="contact.html">Contact us page.</a></p>
-                <p class="text-center">
-Internship type: Work from home
-<br>Time period: Minimum 3 months .
-<br>Stipend: Unpaid (loads of experience as takeaway) 
-</p>
-
-            </div>
-            <div class="row">
-                        <div class=" col-md-4 col-sm-6">
-                            <div class="thumbnail">
-                                <div class="caption">
-                                    <h4 class="heading">Design and Visual communication</h4>
-                                    <p class="content">A section meant for skilled Photoshoppers. Knowledge of CorelDRAW, Illustrator are a welcome deal!<a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></p>
-                                </div>
-                            </div>
-                        </div>                        
-                        <div class=" col-md-4 col-sm-6">
-                            <div class="thumbnail">
-
-                                <div class="caption">
-                                    <h4 class="heading">Social Media</h4>
-                                    <p class="content">We are looking for people who can use Social media platforms like Facebook, Twitter, Reddit, etc. in the right manner for the right cause.<br>
-                                   <a href="http://www.mashglobal.org/http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></p>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class=" col-md-4 col-sm-6">
-                            <div class="thumbnail">
-
-                                <div class="caption">
-                                    <h4 class="heading">Finance</h4>
-                                    <p class="content">We are looking for people who can come up with innovative fundraising strategies and help us in implementing them. <a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></p>
-                                </div>
-                            </div>
-                        </div>
-                
-                
-                        <div class=" col-md-4 col-sm-6">
-                            <div class="thumbnail">
-
-                                <div class="caption">
-                                    <h4 class="heading">Content & Research</h4>
-                                    <p class="content">Believe you can develop awesome content on social cause? Join us as Content Writer! If you find your tastes in digging deep for stories online and offline, then apply for our Research team.<a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class=" col-md-4 col-sm-6">
-                            <div class="thumbnail">
-
-                                <div class="caption">
-                                    <h4 class="heading">Web and Android development</h4>
-                                    <p class="content">We are looking for people with these skills :
-                                    <br>Front end developer: HTML+CSS+JavaScript
-                                    <br>Back end Developer: NodeJs/Php/Python/Java 
-                                    <br>App Developer: Android/iOS
-                                    <a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class=" col-md-4 col-sm-6">
-                            <div class="thumbnail">
-
-                                <div class="caption">
-                                    <h4 class="heading">Events Management</h4>
-                                    <p class="content">If you believe events can power change, and are willing to put in your skills for the same, then MASH is the place for you!<a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></p>
-                                </div>
-                            </div>
-                        </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="get-in-touch">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Get in Touch</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-        </div>
-    </section><!--/#get-in-touch-->    
+       
 
     <!--------------------------------------------FOOTER------------------------------------------>
     <footer id="footer">
