@@ -13,7 +13,7 @@
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.transitions.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/team.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
     <link href="css/responsive.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -37,6 +37,11 @@
     <!--ninjaVideoPlugin.js is required only when the slider contains videos, and its link should be placed before the ninja-slider.js link.-->
     <script src="2/ninjaVideoPlugin.js" type="text/javascript"></script>
     <script src="2/ninja-slider.js" type="text/javascript"></script>
+    
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jssor.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
 </head><!--/head-->
 
 <body id="home" class="homepage">
@@ -56,12 +61,11 @@
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="index.html">Home</a></li>
+                        <li class="scroll active"><a href="index.html#home">Home</a></li>
                         <li class="scroll"><a href="index.html#about">About</a></li>
                         <li class="scroll"><a href="index.html#features">Projects</a></li>
                         <li class="scroll"><a href="index.html#services">Services</a></li>
                         <li class="scroll"><a href="index.html#portfolio">Events</a></li>                        
-                        <!-- <li class="scroll"><a href="#meet-team">Team</a></li> -->
                         <li class="scroll"><a href="index.html#campaigns">Campaigns</a></li>                         
                         <li class="scroll"><a href="index.html#get-in-touch">Contact us</a></li>                        
                     </ul>
@@ -70,101 +74,94 @@
         </nav><!--/nav-->
     </header><!--/header-->
 
-  
-
-    <section id="meet-team">
+ 
+    <!--------------------------------------------INTERNSHIPS------------------------------------------>
+    <section id="internships">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Meet The Team</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-            <div id="portfolio">
-            <div class="text-center">
-                <ul class="portfolio-filter">
-                    <li><a class="active" href="#" data-filter="*">All Members</a></li>
-                    <li><a href="#" data-filter=".event">Events dep.</a></li>
-                    <li><a href="#" data-filter=".content">Content Dep.</a></li>
-                    <li><a href="#" data-filter=".tech">Tech Dep.</a></li>
-                </ul><!--/#portfolio-filter-->
-            </div>
+                <h2 class="section-title text-center wow fadeInDown">Internship<br><small>Looking for a window to expand your ideas?</small></h2>
+                <p class="text-center wow fadeInDown">MASH Project is open for all eager minds, be it a beginner or a master in any field. Check out our sections available for Internship and choose the one which excites you! 
+                <br>For the Experienced ones, if you have any suggestions or believe you can contribute to us in your own way. Please visit our <a href="contact.html">Contact us page.</a></p>
+                <p class="text-center">
+Internship type: Work from home
+<br>Time period: Minimum 3 months .
+<br>Stipend: Unpaid (loads of experience as takeaway) 
+</p>
 
-            <div class="row portfolio-items">
-                <div class="col-sm-6 col-md-3 portfolio-item event">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="images/team/01.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Bin Burhan</h3>
-                            <span>Co-Founder</span>
-                        </div>
-                        <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 portfolio-item content">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="images/team/02.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Jane Man</h3>
-                            <span>Project Manager</span>
-                        </div>
-                        <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 portfolio-item tech">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="images/team/03.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Pahlwan</h3>
-                            <span>Designer</span>
-                        </div>
-                        <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 portfolio-item event">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="images/team/04.jpg" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Nasir uddin</h3>
-                            <span>UI/UX</span>
-                        </div>
-                        <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-</div>
+            <div class="row">
+                        <div class=" col-md-4 col-sm-6">
+                            <div class="thumbnail">
+                                <div class="caption">
+                                    <h4 class="heading">Design and Visual communication</h4>
+                                    <p class="content">A section meant for skilled Photoshoppers. Knowledge of CorelDRAW, Illustrator are a welcome deal!</p>
+         <div class="link"><a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></div>                           
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class=" col-md-4 col-sm-6">
+                            <div class="thumbnail">
+
+                                <div class="caption">
+                                    <h4 class="heading">Social Media</h4>
+                                    <p class="content">We are looking for people who can use Social media platforms like Facebook, Twitter, Reddit, etc. in the right manner for the right cause.</p>
+                                    <div class="link"><a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class=" col-md-4 col-sm-6">
+                            <div class="thumbnail">
+
+                                <div class="caption">
+                                    <h4 class="heading">Finance</h4>
+                                    <p class="content">We are looking for people who can come up with innovative fundraising strategies and help us in implementing them.</p>
+                                    <div class="link"><a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></div>
+                                </div>
+                            </div>
+                        </div>
+                
+                
+                        <div class=" col-md-4 col-sm-6">
+                            <div class="thumbnail">
+
+                                <div class="caption">
+                                    <h4 class="heading">Content & Research</h4>
+                                    <p class="content">Believe you can develop awesome content on social cause? Join us as Content Writer! If you find your tastes in digging deep for stories online and offline, then apply for our Research team.</p>
+                                    <div class="link"><a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-md-4 col-sm-6">
+                            <div class="thumbnail">
+
+                                <div class="caption">
+                                    <h4 class="heading">Web and Android development</h4>
+                                    <p class="content">We are looking for people with these skills :
+                                    <br>Front end developer: HTML+CSS+JavaScript
+                                    <br>Back end Developer: NodeJs/Php/Python/Java 
+                                    <br>App Developer: Android/iOS
+                                    </p>
+                                    <div class="link"><a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-md-4 col-sm-6">
+                            <div class="thumbnail">
+
+                                <div class="caption">
+                                    <h4 class="heading">Events Management</h4>
+                                    <p class="content">If you believe events can power change, and are willing to put in your skills for the same, then MASH is the place for you!</p>
+                                    <div class="link"><a href="http://goo.gl/U3Swie" target="_blank" class="pull-right">Join</a></div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
         </div>
-    </section>  
+    </section>
+
 
     <!--------------------------------------------FOOTER------------------------------------------>
     <footer id="footer">
@@ -173,11 +170,11 @@
 
             <div class="col-md-4 foot">
                          <ul class="text-center">
-                            <li><a href="team.html">Our team</a></li>
+                            <li><a href="team.html" target="_blank">Our team</a></li>
 
-                            <li><a href="contributors.html">Our Contributors</a></li>
+                            <li><a href="contributors.html" target="_blank">Our Contributors</a></li>
 
-                            <li><a href="http://goo.gl/U3Swie" target="_blank">Join</a></li>
+                            <li><a href="internship.html" target="_blank">Internship</a></li>
                             <div class="divider"></div>
 
 
@@ -273,8 +270,32 @@
         </div>
     </div>
 </footer>
+      <!-- Use the modals below to showcase details about your portfolio projects! -->
 
-
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body"> 
+            <!-- Project Details Go Here -->
+            <h2> <a href="https://www.facebook.com/events/677576728985782/" target="_blank">OPEN Dialogue</a></h2>
+              <div class="close-modal" data-dismiss="modal">
+      <button type="button" class="btn btn-primary close-btn" data-dismiss="modal"><i class="fa fa-times"></i></button>
+    </div>
+              <img src="http://www.mashglobal.org/img/open-dialogue.jpg" class="img-responsive" alt="">
+            <p>
+                MASH project organized its first on ground event, OPEN DIALOGUE in collaboration with Human Circle, an organisation which aims to bring together like-minded people driven by the motive of bringing about a change. The event, being an open forum discussion, aimed to bring students, social change makers and organisations to discuss, deliberate and find solutions to issues close to their hearts. After a very energetic and brainstorming session of Change makers, thinkers and revolutionaries gathered under a single roof, ready with their super ideas and transforming plans, we finally bid our good-byes with new friends, new ideas, the will to change, the hope to begin!
+                </p>
+              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     
