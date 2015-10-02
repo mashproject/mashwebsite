@@ -1027,6 +1027,10 @@ section#contact .btn{
 
 /*----------------------------------------------------internships---------------------------------------------------------*/
 
+#internships{
+    padding: 50px 0;
+}
+
 #internships .thumbnail{
     background-color: #2a95be;
 }
@@ -1045,4 +1049,12 @@ section#contact .btn{
 
 #internships .content{
     padding: 10px;
+    height: 100px;
+    overflow-y: hidden;
+}
+
+#internships .link{
+    padding:0 15px 15px 0;
+    font-size: 17px;
+    font-weight: bold;
 }
