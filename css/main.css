@@ -1192,3 +1192,28 @@ label.light {
 #event_det .description{
     margin-top: 20px;
 }
+
+.name {
+  margin-bottom: 50px;
+}
+.name .section-title {
+  font-size: 44px;
+  color: #272727;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 0 20px;
+}
+.name .section-title:before {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  background: #ebebeb;
+}
+.name .section-title:after {
+  content: "";
+  position: absolute;
+  border: 5px solid #fff;
+  border-radius: 20px;
+  background: #45aed6;
+}
