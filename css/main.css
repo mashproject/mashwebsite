@@ -15,6 +15,7 @@ body {
   font-weight: 400;
   color: #64686d;
   line-height: 26px;
+    overflow-x: hidden !important;
 }
 h1,
 h2,
@@ -116,7 +117,6 @@ hr {
 ul.nostyle {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
 }
 ul.nostyle i {
   color: #45aed6;
@@ -1217,3 +1217,55 @@ label.light {
   border-radius: 20px;
   background: #45aed6;
 }
+
+/*----------------------------------------------------Partners-----------------------------------------*/
+
+
+
+ul.gallery { 
+	list-style: none;
+}
+ul.gallery li a {
+	position: relative;
+	float: left;
+	padding: 10px 10px 25px 10px;
+	background: #eee;
+	border: 1px solid #fff;
+	-moz-box-shadow: 0px 2px 15px #333;
+}
+	
+	ul.gallery li a.pic-1 {
+		z-index: 1;
+		-webkit-transform: rotate(-10deg);
+ 		-moz-transform: rotate(-10deg);
+	}
+	ul.gallery li a.pic-2 {
+		z-index: 5;
+		-webkit-transform: rotate(-3deg);
+ 		-moz-transform: rotate(-3deg);
+	}
+	ul.gallery li a.pic-3 {
+		z-index: 3;
+		-webkit-transform: rotate(4deg);
+ 		-moz-transform: rotate(4deg);
+	}
+	ul.gallery li a.pic-4 {
+		z-index: 4;
+		-webkit-transform: rotate(14deg);
+ 		-moz-transform: rotate(14deg);
+	}
+	ul.gallery li a.pic-5 {
+		z-index: 2;
+		-webkit-transform: rotate(-12deg);
+ 		-moz-transform: rotate(-12deg);
+	}
+	ul.gallery li a.pic-6 {
+		z-index: 6;
+		-webkit-transform: rotate(5deg);
+ 		-moz-transform: rotate(5deg);
+	}
+	
+	ul.gallery li a:hover {
+		z-index: 10;
+		-moz-box-shadow: 3px 5px 15px #333;
+	}
