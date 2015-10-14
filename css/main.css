@@ -1269,3 +1269,45 @@ ul.gallery li a {
 		z-index: 10;
 		-moz-box-shadow: 3px 5px 15px #333;
 	}
+
+
+
+
+
+.popbox {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    width: 400px;
+    padding: 15px 5px 0 5px;
+    background: #2a95be;
+    color: #fff;
+    margin: 0;
+}
+
+.popbox p{
+    background-color: #E3E5DD;
+    color: #000;
+    padding: 10px;
+}
+
+.popbox h2 {
+    margin-top: 5px;
+    color: #E3E5DD;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    margin: -10px 0px 8px -10px;
+    padding: 5px 10px;
+}
+
+/*--------------------------------------------------------Cultures-----------------------------------------*/
+
+#culture .thumbnail:hover,
+.thumbnail:focus {
+  border-color: #2a95be;
+}
+
+#culture .date, .time{
+    color: #000;
+}
