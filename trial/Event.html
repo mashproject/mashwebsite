@@ -62,8 +62,7 @@
             
                         <div class="row">
 
-            <div class="col-md-5 img-responsive">
-                <img class="img-responsive" src="../images/portfolio/02.jpg">   
+            <div id="image" class="col-md-5 img-responsive">   
             </div>
                             
             <div class="col-md-7 name">
@@ -77,6 +76,53 @@
                 </div>
             </div>
             
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="partner-heading">Partners</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="team-member row">
+                        <div class="col-md-6 team-img">
+                            <img class="img-responsive" src="../images/partners/CoWorkIn-logo.jpg" alt="">
+                        </div>
+                        <div class="col-md-6">
+                         <p><span style="font-size:19px;"><b>CoworkIn</b></span> is a network of coworking spaces and their member coworkers to connect with the entrepreneurial and social community across the spaces. CoworkIn allows all members and spaces to interact with each other, share resources and build their own local communities.</p>
+                </div>       
+                </div>
+                    </div>
+                <div class="col-md-6">
+                    <div class="row team-member ">
+                        <div class="col-md-6 team-img">
+                            <img class="img-responsive" src="../images/partners/human-circle-logo.png" alt="">
+                        </div>
+                        <div class="col-md-6">
+  
+                        <p><span style="font-size:19px;"><b>Human Circle</b></span> is a movement to inspire and enable young people to do what they love. It is an experiential platform comprising of physical and virtual forums like conferences, workshops, retreats and online communities, to empower people with mindsets and skills required to become impact individuals.</p>
+                    </div>        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row team-member">
+                        <div class="col-md-6 team-img">
+                              <img class="img-responsive" src="../images/partners/josh-talks-logo.png" alt="">
+                        </div>
+                        <div class="col-md-6">
+                        
+                        <p><span style="font-size:19px;"><b>Josh Talks</b></span> is a platform that showcases India’s most inspiring stories to you. It features and highlights the struggle that people go through, the pain they have to suffer and the obstacles they have to overcome to reach their ultimate goal of success. It aims to disrupt you, move you, motivate you and inspire you.</p>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
             <span id="gallery"></span>
             
         </div><!--container-->
@@ -242,6 +288,16 @@
             output=data[i].gallery_div;
         }
         document.getElementById("gallery").innerHTML=output;
+        });
+    </script>
+
+    <script>
+        $.getJSON('http://52.74.102.84:8000/events/?format=json', function(data) {
+        var output="";
+        for (var i in data) {
+            output=data[i].image_url;
+        }
+        document.getElementById("image").innerHTML='<img class="img-responsive" src="'+output+'">';
         });
     </script>
 
