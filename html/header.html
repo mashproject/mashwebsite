@@ -1,3 +1,16 @@
+
+<script>
+    function getBaseUrl() {
+        var re = new RegExp(/^.*\//);
+        return re.exec(window.location.href);
+    }
+    baseUrl = getBaseUrl()[0]
+    $('.scroll').each(function(){
+        var url = $(this).find('a').attr('href');
+        url = baseUrl + url;$(this).find('a').attr("href", url)
+    });
+
+</script>
         <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
             <div class="container">
                 <div class="navbar-header">
@@ -12,7 +25,7 @@
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="#home">Home</a></li>
+                        <li class="scroll active"><a href="#">Home</a></li>
                         <li class="scroll"><a href="#about">About</a></li>
                         <li class="scroll"><a href="#features">Projects</a></li>
                         <li class="scroll"><a href="#services">Services</a></li>
