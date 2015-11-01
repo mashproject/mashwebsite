@@ -21,7 +21,7 @@
                 <p>{{event.location}}</p>
                 <p>{{event.regiteration_link}}</p>
                 </div>
-                            {{event.gallery_div}}
+                            <p ng-bind-html="event.gallery_div"></p>
                             <div ng-repeat="supporter in supporters">
                                 {{supporter.title}}<br>
                                 {{supporter.name}}<br>
