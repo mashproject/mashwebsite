@@ -1,7 +1,12 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var app = angular.module('myApp', ['ui.router','ngSanitize']);
+var app = angular.module('myApp', ['ui.router']);
+app.filter('to_trusted', ['$sce', function($sce){
+    return function(text) {
+        return $sce.trustAsHtml(text);
+    };
+}]);
 
 app.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
