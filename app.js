@@ -1,7 +1,27 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ui.router']);
+
+app.config(['$stateProvider', '$urlRouterProvider',
+    function ($stateProvider, $urlRouterProvider) {
+
+        /*$locationProvider.html5Mode(true);*/
+        $stateProvider.
+            /* PUBLIC PAGES */
+            state('events', {
+                url: '/events/{id:int}',
+                templateUrl: "Event.html",
+                controller: 'singlEventCtrl'
+            }).
+            state('home', {
+                url: '',
+                templateUrl: 'html/home.html',
+                controller: ''
+            })
+
+    }]);
+
 app.directive('appfooter', function () {
     return {
         templateUrl: "html/footer.html"
@@ -12,35 +32,50 @@ app.directive('appheader', function () {
         templateUrl: "html/header.html"
     };
 });
-app.controller('eventCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-        $http.get('http://52.74.102.84:8000/events').success(function (data) {
+app.controller('eventCtrl', ['$scope', '$http', '$state',
+    function ($scope, $http, $state) {
+        console.log('loading events');
+        $http.get('http://52.74.102.84:8000/events/?is_published=true').success(function (data) {
             $scope.events = data;
+            console.log(data);
         });
-        $scope.open=function(id){
-
+        $scope.open = function (id) {
+            $state.go('events', {id: id});
         }
     }]);
+app.controller('singlEventCtrl', ['$scope', '$http', '$stateParams',
+    function ($scope, $http, $stateParams) {
+        var id = $stateParams.id;
+        console.log('inside event ' + id.toString());
+        $http.get('http://52.74.102.84:8000/events/?id=' + id.toString()).success(function (data) {
+            $scope.event = data[0];
+            console.log(data);
+            console.log({"ids":data[0].supporters});
+            $http.post('http://52.74.102.84:8000/events/supporters', {"ids":data[0].supporters}).success(function (data) {
+                $scope.supporters = data;
+                console.log(data);
+            });
+        });
+    }]);
+app.run(['$anchorScroll', function ($anchorScroll) {
+    $anchorScroll.yOffset = 50;   // always scroll by 50 extra pixels
+}]);
+app.controller('headerCtrl', ['$anchorScroll', '$location', '$scope',
+    function ($anchorScroll, $location, $scope) {
+        $scope.gotoAnchor = function (x) {
+            var newHash = x;
+            $scope.active = x;
+            if ($location.hash() !== newHash) {
+                // set the $location.hash to `newHash` and
+                // $anchorScroll will automatically scroll to it
+                $location.hash(x);
+            } else {
+                // call $anchorScroll() explicitly,
+                // since $location.hash hasn't changed
+                $anchorScroll();
+            }
+        };
+    }
+]);
 
-//app.config(['$stateProvider', '$urlRouterProvider',
-//    function ($stateProvider, $urlRouterProvider) {
-//        /*$locationProvider.html5Mode(true);*/
-//        $stateProvider.
-//
-//            /* PUBLIC PAGES */
-//            state('events', {
-//                url: '/events/{id:int}',
-//                templateUrl: 'Events.html',
-//                controller: ['$scope', '$http','$stateParams',
-//                    function ($scope, $http,$stateParams) {
-//                        id=$stateParams.id;
-//                        $http.get('http://52.74.102.84:8000/events/').success(function (data) {
-//                            $scope.events = data;
-//                        });
-//
-//                    }]
-//            })
-//
-//
-//
-//    }]);
+

@@ -1,4 +1,4 @@
-<nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+<nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner" ng-controller="headerCtrl">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -11,15 +11,15 @@
                     src="https://s3-ap-southeast-1.amazonaws.com/mashglobal.org/logo-small.png" alt="logo"></a>
         </div>
 
-        <div class="collapse navbar-collapse navbar-right">
+        <div class="collapse navbar-collapse navbar-right" ng-init="active ='home'">
             <ul class="nav navbar-nav">
-                <li class="scroll active"><a href="#home">Home</a></li>
-                <li class="scroll"><a href="#about">About</a></li>
-                <li class="scroll"><a href="#features">Projects</a></li>
-                <li class="scroll"><a href="#services">Services</a></li>
-                <li class="scroll"><a href="#portfolio">Events</a></li>
-                <li class="scroll"><a href="#campaigns">Campaigns</a></li>
-                <li class="scroll"><a href="#get-in-touch">Contact us</a></li>
+                <li class="scroll" ng-class="{'active':active=='home'}"><a href="" ng-click="gotoAnchor('home')">Home</a></li>
+                <li class="scroll" ng-class="{'active':active=='about'}"><a href="" ng-click="gotoAnchor('about')">About</a></li>
+                <li class="scroll" ng-class="{'active':active=='features'}"><a href="" href="" ng-click="gotoAnchor('features')">Projects</a></li>
+                <li class="scroll" ng-class="{'active':active=='services'}"><a href=""ng-click="gotoAnchor('services')">Services</a></li>
+                <li class="scroll" ng-class="{'active':active=='portfolio'}"><a href="" ng-click="gotoAnchor('portfolio')">Events</a></li>
+                <li class="scroll" ng-class="{'active':active=='blog'}"><a href="" ng-click="gotoAnchor('blog')">Campaigns</a></li>
+                <li class="scroll" ng-class="{'active':active=='get-in-touch'}"><a href="" ng-click="gotoAnchor('get-in-touch')">Contact us</a></li>
             </ul>
         </div>
     </div>
