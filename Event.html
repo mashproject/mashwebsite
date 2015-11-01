@@ -21,7 +21,7 @@
                 <p>{{event.location}}</p>
                 <p>{{event.regiteration_link}}</p>
                 </div>
-                            {{event.gallery_div}}
+
                             <div ng-repeat="supporter in supporters">
                                 {{supporter.title}}<br>
                                 {{supporter.name}}<br>
@@ -30,8 +30,8 @@
                                 {{supporter.title}}<br>
                             </div>
             </div>
-            
-            <div id="cp_widget_e06b819b-6c08-4e8b-b344-5aaa383afae7">...</div>
+
+            <div ng-bind-html="event.gallery_div | to_trusted"></div>
             <script type="text/javascript">
                 var cpo = []; 
                 cpo["_object"] ="cp_widget_e06b819b-6c08-4e8b-b344-5aaa383afae7"; 
@@ -46,8 +46,6 @@
                     var c = document.getElementsByTagName("script")[0];
                     c.parentNode.insertBefore(cp, c); })(); 
             </script>
-            <noscript>
-                Powered by Cincopa <a href='http://www.cincopa.com/video-hosting'>Video Hosting for Business</a> solution.<span>Mixer1</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 576</span><span>height</span><span> 842</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 2048</span><span>height</span><span> 1152</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 2048</span><span>height</span><span> 1519</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 128</span><span>height</span><span> 128</span></noscript>
             
         </div><!--container-->
     </section>
