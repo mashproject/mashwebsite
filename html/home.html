@@ -595,8 +595,8 @@
             </div>
 
             <div class="portfolio-items" >
-                <div ng-repeat="event in events | orderBy:pub_date" >
-                    <div ng-show="event.is_published" class="portfolio-item {{event.type_id}}">
+                <div ng-repeat="event in events |orderBy:'pub_date'" >
+                    <div class="portfolio-item {{event.type_id}}">
                         <div class="portfolio-item-inner">
                             <img class="img-responsive" ng-src="{{event.image_url}}" alt="">
 

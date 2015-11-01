@@ -22,7 +22,7 @@ app.config(['$stateProvider', '$urlRouterProvider',
             state('home', {
                 url: '',
                 templateUrl: 'html/home.html',
-                controller: ''
+                controller: 'eventCtrl'
             })
 
     }]);
