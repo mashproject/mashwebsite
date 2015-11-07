@@ -3,7 +3,7 @@
 </header>
 
     <section id="main-slider">
-        <div class="visible-lg-block, visible-md-block, hidden-sm, hidden-xs">
+        <div >
             <!--start-->
             <div id='ninja-slider'>
                 <ul>
@@ -25,89 +25,7 @@
                 </ul>
             </div>
             <!--end-->
-        </div>
-
-        <div id="slider1_container" class=" hidden-lg, hidden-md, visible-sm-block, visible-xs-block"
-             style="position: relative; width: 768px; height: 640px; background-color: #000; overflow: hidden; margin: 0px !important;">
-
-            <!-- Loading Screen -->
-            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
-                </div>
-                <div style="position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
-                top: 0px; left: 0px;width: 100%;height:100%;">
-                </div>
-            </div>
-
-            <!-- Slides Container -->
-            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 768px; height: 640px;
-            overflow: hidden;">
-                <div>
-                    <a u=image href="#"><img src="https://s3-ap-southeast-1.amazonaws.com/mashglobal.org/redspot.png"/></a>
-                </div>
-                <div>
-                    <a u=image href="#"><img src="https://s3-ap-southeast-1.amazonaws.com/mashglobal.org/inkalam.jpg"/></a>
-                </div>
-                <div>
-                    <a u=image href="#"><img
-                            src="https://s3-ap-southeast-1.amazonaws.com/mashglobal.org/action2015.jpg"/></a>
-                </div>
-                <div>
-                    <a u=image href="#"><img
-                            src="https://s3-ap-southeast-1.amazonaws.com/mashglobal.org/action2015Mash.jpg"/></a>
-                </div>
-            </div>
-
-            <!--#region Bullet Navigator Skin Begin -->
-            <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
-            <style>
-                /* jssor slider bullet navigator skin 13 css */
-                /*
-                .jssorb13 div           (normal)
-                .jssorb13 div:hover     (normal mouseover)
-                .jssorb13 .av           (active)
-                .jssorb13 .av:hover     (active mouseover)
-                .jssorb13 .dn           (mousedown)
-                */
-                .jssorb13 {
-                    position: absolute;
-                }
-
-                .jssorb13 div, .jssorb13 div:hover, .jssorb13 .av {
-                    position: absolute;
-                    /* size of bullet elment */
-                    width: 21px;
-                    height: 21px;
-                    background: url(images/b13.png) no-repeat;
-                    overflow: hidden;
-                    cursor: pointer;
-                }
-
-                .jssorb13 div {
-                    background-position: -5px -5px;
-                }
-
-                .jssorb13 div:hover, .jssorb13 .av:hover {
-                    background-position: -35px -5px;
-                }
-
-                .jssorb13 .av {
-                    background-position: -65px -5px;
-                }
-
-                .jssorb13 .dn, .jssorb13 .dn:hover {
-                    background-position: -95px -5px;
-                }
-            </style>
-            <!-- bullet navigator container -->
-            <div u="navigator" class="jssorb13" style="bottom: 16px;">
-                <!-- bullet navigator item prototype -->
-                <div u="prototype"></div>
-            </div>
-            <!--#endregion Bullet Navigator Skin End -->
-            <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
-        </div>
+        </div>        
     </section>
     <!--/#main-slider-->
 
@@ -423,60 +341,6 @@
                         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">
                             Service Provider
                         </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal1" role="dialog">
-                            <div class="modal-dialog modal-md">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Modal Header</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="index.html" method="post">
-
-
-                                            <fieldset>
-                                                <input type="text" id="pname" name="user_name" placeholder="Name" required>
-                                                <input type="email" id="pmail" name="user_email" placeholder="Email"
-                                                       required>
-                                                <input type="tel" id="pcontact" name="user_contact" placeholder="Contact"
-                                                       required>
-                                            </fieldset>
-
-                                            <fieldset>
-                                                <label>Services you can provide:</label>
-                                                <input type="checkbox" id="pmobile_app" value="service_mobile_app"
-                                                       name="provide_service"><label class="light">Mobile
-                                                Application</label><br>
-                                                <input type="checkbox" id="pweb_design" value="service_web_design"
-                                                       name="provide_service"><label class="light">Website Design and
-                                                Implementation</label><br>
-                                                <input type="checkbox" id="psocial_media" value="service_social_media"
-                                                       name="provide_service"><label class="light">Social Media Strategy and
-                                                Implementation</label><br>
-                                                <input type="checkbox" id="pcontent" value="service_content"
-                                                       name="provide_service"><label class="light">Content</label><br>
-                                                <input type="checkbox" id="pdesign" value="service_design"
-                                                       name="provide_service"><label class="light">Design</label><br>
-                                                <input type="checkbox" id="pground_outreach" value="service_ground_outreach"
-                                                       name="provide_service"><label class="light">Ground Outreach</label>
-                                            </fieldset>
-
-                                            <fieldset>
-                                                <label>Description:</label>
-                                                <textarea id="pdescrition" name="Descrition"></textarea>
-                                            </fieldset>
-
-                                            <button class="button-form" type="submit">Sign Up</button>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -485,89 +349,7 @@
                         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">
                             Service Beneficiary
                         </button>
-
                         <!-- Modal -->
-                        <div class="modal fade" id="myModal2" role="dialog">
-                            <div class="modal-dialog modal-md">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Modal Header</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="index.html" method="post">
-
-                                            <h1>Sign Up</h1>
-
-                                            <fieldset>
-                                                <legend><span class="number">1</span>Your basic info</legend>
-                                                <label for="name">Name:</label>
-                                                <input type="text" id="name" name="user_name">
-
-                                                <label for="mail">Email:</label>
-                                                <input type="email" id="mail" name="user_email">
-
-                                                <label for="password">Password:</label>
-                                                <input type="password" id="password" name="user_password">
-
-                                                <label>Age:</label>
-                                                <input type="radio" id="under_13" value="under_13" name="user_age"><label
-                                                    for="under_13" class="light">Under 13</label><br>
-                                                <input type="radio" id="over_13" value="over_13" name="user_age"><label
-                                                    for="over_13" class="light">13 or older</label>
-                                            </fieldset>
-
-                                            <fieldset>
-                                                <legend><span class="number">2</span>Your profile</legend>
-                                                <label for="bio">Biography:</label>
-                                                <textarea id="bio" name="user_bio"></textarea>
-                                            </fieldset>
-                                            <fieldset>
-                                                <label for="job">Job Role:</label>
-                                                <select id="job" name="user_job">
-                                                    <optgroup label="Web">
-                                                        <option value="frontend_developer">Front-End Developer</option>
-                                                        <option value="php_developor">PHP Developer</option>
-                                                        <option value="python_developer">Python Developer</option>
-                                                        <option value="rails_developer"> Rails Developer</option>
-                                                        <option value="web_designer">Web Designer</option>
-                                                        <option value="WordPress_developer">WordPress Developer</option>
-                                                    </optgroup>
-                                                    <optgroup label="Mobile">
-                                                        <option value="Android_developer">Androild Developer</option>
-                                                        <option value="iOS_developer">iOS Developer</option>
-                                                        <option value="mobile_designer">Mobile Designer</option>
-                                                    </optgroup>
-                                                    <optgroup label="Business">
-                                                        <option value="business_owner">Business Owner</option>
-                                                        <option value="freelancer">Freelancer</option>
-                                                    </optgroup>
-                                                    <optgroup label="Other">
-                                                        <option value="secretary">Secretary</option>
-                                                        <option value="maintenance">Maintenance</option>
-                                                    </optgroup>
-                                                </select>
-
-                                                <label>Interests:</label>
-                                                <input type="checkbox" id="development" value="interest_development"
-                                                       name="user_interest"><label class="light" for="development">Development</label><br>
-                                                <input type="checkbox" id="design" value="interest_design"
-                                                       name="user_interest"><label class="light" for="design">Design</label><br>
-                                                <input type="checkbox" id="business" value="interest_business"
-                                                       name="user_interest"><label class="light"
-                                                                                   for="business">Business</label>
-
-                                            </fieldset>
-                                            <button type="submit">Sign Up</button>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -612,45 +394,8 @@
         <!--/.container-->
     </section>
     <!--/#portfolio-->
-
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2><a href="https://www.facebook.com/events/677576728985782/" target="_blank">OPEN Dialogue</a>
-                            </h2>
-
-                            <div class="close-modal" data-dismiss="modal">
-                                <button type="button" class="btn btn-primary close-btn" data-dismiss="modal"><i
-                                        class="fa fa-times"></i></button>
-                            </div>
-                            <img src="http://www.mashglobal.org/img/open-dialogue.jpg" class="img-responsive" alt="">
-
-                            <p>
-                                MASH project organized its first on ground event, OPEN DIALOGUE in collaboration with Human
-                                Circle, an organisation which aims to bring together like-minded people driven by the motive
-                                of bringing about a change. The event, being an open forum discussion, aimed to bring
-                                students, social change makers and organisations to discuss, deliberate and find solutions
-                                to issues close to their hearts. After a very energetic and brainstorming session of Change
-                                makers, thinkers and revolutionaries gathered under a single roof, ready with their super
-                                ideas and transforming plans, we finally bid our good-byes with new friends, new ideas, the
-                                will to change, the hope to begin!
-                            </p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>
-                                Close
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
+    
     <!-- <section id="meet-team">
         <div class="container">
             <div class="section-header">
