@@ -82,5 +82,3 @@ app.controller('headerCtrl', ['$anchorScroll', '$location', '$scope',
         };
     }
 ]);
-
-
