@@ -370,21 +370,22 @@
                 <ul class="portfolio-filter">
                     <li><a class="active" data-filter="*">All Events</a></li>
                     <li><a data-filter=".1">MASH Mixers</a></li>
-                    <li><a  data-filter=".4">MASH UPs</a></li>
                     <li><a  data-filter=".3">Open Dialogues</a></li>
+                    <li><a  data-filter=".4">MASH UPs</a></li>
+                    <!-- <li><a  data-filter=".5">UPCOMING</a></li> -->
                 </ul>
                 <!--/#portfolio-filter-->
             </div>
 
             <div class="portfolio-items" >
-                <div ng-repeat="event in events |orderBy:'pub_date'" >
+                <div ng-repeat="event in events " >
                     <div class="portfolio-item {{event.type_id}}">
                         <div class="portfolio-item-inner">
-                            <img class="img-responsive" ng-src="{{event.image_url}}" alt="">
+                            <img class="img-responsive" ng-src="{{event.typeImage}}" alt="" ng-click="open(event.id)">
 
                             <div class="portfolio-info" ng-click="open(event.id)">
                                 <h3>{{event.title}}</h3>
-                                {{event.type_id}}
+                                {{event.pub_date}}
                             </div>
                         </div>
                     </div>

@@ -2,6 +2,7 @@ var HOST = "http://52.74.102.84:8000";
 var mediaHOST = "http://mashglobal.org.s3.amazonaws.com/media/";
 var eventsData = [];
 var eventsIds = [];
+var eventsTypeDefaultImages = {1: "images/mixer.jpg", 3: "images/od.jpg", 4: "images/mashup.jpg"}
 var supportersData = [];
 var supportersIds = [];
 var facebookURL = "https://www.facebook.com/MashProject";

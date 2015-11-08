@@ -62,15 +62,30 @@ app.directive('appheader', function () {
 
 app.controller('eventCtrl', ['$scope', '$http', '$state',
     function ($scope, $http, $state) {
-        console.log('loading all published events');
-        $http.get(HOST+'/events/?is_published=true').success(function (data) {
-            console.log(data);
-            $scope.events = data;
-            for (var i=0; i<data.length; i++){
-                eventsData[data[i].id] = data[i];
-                eventsIds[i] = data[i].id                
-            }
-        });
+        // if(eventsData.length == 0){
+            console.log('loading all published events');
+            $http.get(HOST+'/events/?is_published=true').success(function (data) {
+                console.log(data)
+                $scope.events = data;
+                for (var i=0; i<data.length; i++){
+                    eventsData[data[i].id] = data[i];
+                    eventsIds[i] = data[i].id
+                    $scope.events[i].typeImage = eventsTypeDefaultImages[data[i].type_id]                
+                }
+            });
+        // }else{
+        //     console.log("data already saved")
+        //     $scope.events = eventsData
+        //     for (var i=0; i<eventsIds.length; i++){
+        //         console.log(eventsIds[i])
+        //         console.log(eventsData[eventsIds[i]].type_id)
+        //         console.log(eventsTypeDefaultImages[eventsData[eventsIds[i]].type_id])
+        //         console.log(i)
+        //         // console.log(eventsData[eventsIds[i]])
+        //         $scope.events[eventsIds[i]].typeImage = eventsTypeDefaultImages[eventsData[eventsIds[i]].type_id]                
+        //     }
+        //     console.log($scope.events)
+        // }
         $scope.open = function (id) {
             $state.go('events', {id: id});
         };
