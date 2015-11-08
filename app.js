@@ -8,22 +8,44 @@ app.filter('to_trusted', ['$sce', function($sce){
     };
 }]);
 
+
 app.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-
+        $urlRouterProvider.otherwise("/");
         /*$locationProvider.html5Mode(true);*/
         $stateProvider.
             /* PUBLIC PAGES */
             state('events', {
-                url: '/events/{id:int}',
+                url: '^/events/{id:int}',
                 templateUrl: "Event.html",
                 controller: 'singlEventCtrl'
             }).
             state('home', {
-                url: '',
+                url: '/',
                 templateUrl: 'html/home.html',
                 controller: 'eventCtrl'
+            }).
+            state('internship', {
+                url: '/internship',
+                templateUrl: 'internship.html'
+            }).
+            state('team', {
+                url: '/team',
+                templateUrl: 'team.html'
+            }).
+            state('partners', {
+                url: '/partner',
+                templateUrl: 'Partners.html'
+            }).
+            state('contributors', {
+                url: '/contributors',
+                templateUrl: 'Contributors.html'
+            }).
+            state('culture', {
+                url: '/culture',
+                templateUrl: 'Culture.html'
             })
+
 
     }]);
 
@@ -46,7 +68,7 @@ app.controller('eventCtrl', ['$scope', '$http', '$state',
         });
         $scope.open = function (id) {
             $state.go('events', {id: id});
-        }
+        };
     }]);
 app.controller('singlEventCtrl', ['$scope', '$http', '$stateParams',
     function ($scope, $http, $stateParams) {
@@ -62,15 +84,20 @@ app.controller('singlEventCtrl', ['$scope', '$http', '$stateParams',
             });
         });
     }]);
-app.run(['$anchorScroll', function ($anchorScroll) {
-    $anchorScroll.yOffset = 50;   // always scroll by 50 extra pixels
+app.run(["$rootScope", "$anchorScroll" , function ($rootScope, $anchorScroll) {
+    $anchorScroll.yOffset = 50;
+    $rootScope.$on("$locationChangeSuccess", function() {
+        $anchorScroll();
+    });
 }]);
 app.controller('headerCtrl', ['$anchorScroll', '$location', '$scope',
     function ($anchorScroll, $location, $scope) {
         $scope.gotoAnchor = function (x) {
             var newHash = x;
+            console.log($location.path(''));
+            $location.replace();
             $scope.active = x;
-            if ($location.hash() !== newHash) {
+            if ($location.hash() != newHash) {
                 // set the $location.hash to `newHash` and
                 // $anchorScroll will automatically scroll to it
                 $location.hash(x);
@@ -82,3 +109,4 @@ app.controller('headerCtrl', ['$anchorScroll', '$location', '$scope',
         };
     }
 ]);
+
