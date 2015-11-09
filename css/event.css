@@ -21,6 +21,7 @@ body {
 }
 
 a {
+  color: #030404;
   -webkit-transition: 300ms;
   -moz-transition: 300ms;
   -o-transition: 300ms;
@@ -163,7 +164,7 @@ h2 {
 *******Home CSS******
 **************************/
 
-#home {
+#eventHome {
   position: relative;
   overflow: hidden;
 }
@@ -247,7 +248,7 @@ h2 {
 *******Explore CSS******
 **************************/
 
-#explore {
+#eventPartners {
   background-color: #C34C39;
   background-image: url("../images/event-bg.jpg");
   background-position: center bottom;
@@ -264,7 +265,7 @@ h2 {
   top: 7%;
 }
 
-#explore h2 {
+#eventPartners h2 {
   font-size: 42px;
   text-transform: uppercase;
   text-align: center;
@@ -384,7 +385,7 @@ h2 {
  /*************************
 *******Event CSS******
 **************************/
-#event {
+#eventAlbum {
   background-color: #33888F;
   background-image: url("../images/performar-bg.jpg");
   background-position: 50% 0;
@@ -400,7 +401,7 @@ h2 {
 }
 
 
-#event h2 {
+#eventAlbum h2 {
   color: #FFFFFF;
   font-size: 36px;
   font-weight: 300;
@@ -454,7 +455,7 @@ h2 {
 *******About CSS**********
 **************************/
 
-#about {
+#eventAbout {
   background-color: #75B46E;  
   position: relative;  
   width: 100%;
@@ -480,7 +481,7 @@ h2 {
 }
 
 
-#about h2 {
+#eventAbout h2 {
   margin-bottom: 23px;
 }
 

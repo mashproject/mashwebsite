@@ -5,7 +5,7 @@
     </header><!--/header-->
 
 
-    <section id="partners">
+    <section id="partners" ng-controller="supportersCtrl">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Our Partners</small></h2>
@@ -13,46 +13,28 @@
 	   <ul class="gallery row">
         
         
-        <div id="pop1" class="popbox">
-            <h2>Name1</h2>
-            <p>Bahut saara Text1</p>
-        </div>
-		<li class="col-lg-4 col-sm-6"><a href="#" class="pic-1 popper" data-popbox="pop1"><img class="img-responsive" src="images/portfolio/01.jpg" alt="" /></a></li>
+            
+           <div ng-repeat="supporter in supporters">
+                <!-- <div class="col-xs-6 col-md-3">
+                    <div class="single-event">                            
+                        <a href= "{{supporter.url}}">
+                        <img class="img-responsive" src="{{supporter.image_url}}" alt="event-image" >
+                    </div>
+                </div> -->
+                <div class="col-md-4">
+                    <div class="thumbnail">           
+                        <a href= "{{supporter.url}}">
+                        <img class="img-responsive" src="{{supporter.image_url}}" alt="event-image" >
+                        <div class="caption text-justify">                            
+                            <p>
+                                {{supporter.description}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
            
-           
-        <div id="pop2" class="popbox">
-            <h2>Name2</h2>
-            <p>Bahut saara Text2</p>
-        </div>
-		<li class="col-lg-4 col-sm-6"><a href="#" class="pic-2 popper" data-popbox="pop2"><img class="img-responsive" src="images/portfolio/01.jpg" alt="" /></a></li>
         
-        
-        <div id="pop3" class="popbox">
-            <h2>Name3</h2>
-            <p>Bahut saara Text3</p>
-        </div>
-		<li class="col-lg-4 col-sm-6"><a href="#" class="pic-3 popper" data-popbox="pop3"><img class="img-responsive" src="images/portfolio/01.jpg" alt="" /></a></li>
-        
-        
-        <div id="pop4" class="popbox">
-            <h2>Name4</h2>
-            <p>Bahut saara Text4</p>
-        </div>
-		<li class="col-lg-4 col-sm-6"><a href="#" class="pic-4 popper" data-popbox="pop4"><img class="img-responsive" src="images/portfolio/01.jpg" alt="" /></a></li>
-        
-        
-        <div id="pop5" class="popbox">
-            <h2>Name5</h2>
-            <p>Bahut saara Text5</p>
-        </div>
-		<li class="col-lg-4 col-sm-6"><a href="#" class="pic-5 popper" data-popbox="pop5"><img class="img-responsive" src="images/portfolio/01.jpg" alt="" /></a></li>
-        
-        
-        <div id="pop6" class="popbox">
-            <h2>Name6</h2>
-            <p>Bahut saara Text6</p>
-        </div>
-		<li class="col-lg-4 col-sm-6"><a href="#" class="pic-6 popper" data-popbox="pop6"><img class="img-responsive" src="images/portfolio/01.jpg" alt="" /></a></li>
 	</ul>
 
 </div>
@@ -64,48 +46,7 @@
     <div appfooter></div>  
     </footer>
 
-        <script>
-    var moveLeft = 0;
-var moveDown = 0;
-$('a.popper').hover(function (e) {
 
-    var target = '#' + ($(this).attr('data-popbox'));
-    $(target).show();
-    moveLeft = $(this).outerWidth();
-    moveDown = ($(target).outerHeight() / 2);
-}, function () {
-    var target = '#' + ($(this).attr('data-popbox'));
-    if (!($("a.popper").hasClass("show"))) {
-        $(target).hide();
-    }
-});
-
-$('a.popper').mousemove(function (e) {
-    var target = '#' + ($(this).attr('data-popbox'));
-
-    leftD = e.pageX + parseInt(moveLeft);
-    maxRight = leftD + $(target).outerWidth();
-    windowLeft = $(window).width() - 40;
-    windowRight = 0;
-    maxLeft = e.pageX - (parseInt(moveLeft) + $(target).outerWidth() + 20);
-
-    if (maxRight > windowLeft && maxLeft > windowRight) {
-        leftD = maxLeft;
-    }
-
-    topD = e.pageY - parseInt(moveDown);
-    maxBottom = parseInt(e.pageY + parseInt(moveDown) + 20);
-    windowBottom = parseInt(parseInt($(document).scrollTop()) + parseInt($(window).height()));
-    maxTop = topD;
-    windowTop = parseInt($(document).scrollTop());
-    if (maxBottom > windowBottom) {
-        topD = windowBottom - $(target).outerHeight() - 20;
-    } else if (maxTop < windowTop) {
-        topD = windowTop + 20;
-    }
-
-    $(target).css('top', topD).css('left', leftD);
-});
     </script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
