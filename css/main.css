@@ -1144,11 +1144,10 @@ label.light {
 /*-------------------------------------------------Event Details----------------------------------------------*/
 
 #event_det{
-    margin-top: 50px;
 }
 
 #event_det .description{
-    margin-top: 20px;
+
 }
 
 .name {
