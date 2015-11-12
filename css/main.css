@@ -40,12 +40,19 @@ a:focus {
   color: #2a95be;
 }
 
+<<<<<<< HEAD
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;}
+=======
 .carousel-inner .item img{
         display: block;
         width: 100%;
         max-width: 100%;
         height: auto;
     }
+>>>>>>> origin/master
 
 
 
