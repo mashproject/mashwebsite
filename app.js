@@ -15,10 +15,14 @@ app.config(['$stateProvider', '$urlRouterProvider',
         /*$locationProvider.html5Mode(true);*/
         $stateProvider.
             /* PUBLIC PAGES */
-            state('events', {
-                url: '^/events/{id:int}',
+            state('event', {
+                url: '^/event/{id:int}',
                 templateUrl: "html/Event.html",
                 controller: 'singlEventCtrl'
+            }).
+            state('Events', {
+                url: '/Events',
+                templateUrl: "html/Events.html",                
             }).
             state('home', {
                 url: '/',
@@ -88,7 +92,7 @@ app.controller('eventCtrl', ['$scope', '$http', '$state',
         //     console.log($scope.events)
         // }
         $scope.open = function (id) {
-            $state.go('events', {id: id});
+            $state.go('event', {id: id});
         };
     }]);
 
@@ -130,12 +134,11 @@ app.controller('singlEventCtrl', ['$scope', '$http', '$stateParams',
             });
         }else{
             console.log("data not null");
-            if(data[0].image_url == null){
-                    data[0].image_url = eventsTypeDefaultImages[id]
+            if(eventsData[id].image_url == null){
+                    eventsData[id].image_url.image_url = eventsTypeDefaultImages[id]
                 }else{
-                    data[0].image_url = data[0].image_url.replace("https", "http");
-                }
-            eventsData[id].image_url = eventsData[id].image_url.replace("https", "http");
+                    eventsData[id].image_url = eventsData[id].image_url.replace("https", "http");
+                }            
             var event = eventsData[id];
             $scope.event = event;
                 console.log({"ids":event.supporters});
