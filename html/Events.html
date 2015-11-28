@@ -1,0 +1,54 @@
+<header id="header">
+    <div appheader></div>
+    </header><!--/header-->
+
+
+    <section id="portfolio" ng-controller="eventCtrl">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Events</h2>
+
+                <p class="text-center wow fadeInDown">Purpose of our events is to build right kind of platform for the selected community.</p>
+            </div>
+
+            <div class="text-center">
+                <ul class="portfolio-filter">
+                    <li><a class="active" data-filter="*">All Events</a></li>
+                    <li><a data-filter=".1">MASH Mixers</a></li>
+                    <li><a  data-filter=".3">Open Dialogues</a></li>
+                    <li><a  data-filter=".4">MASH UPs</a></li>
+                    <!-- <li><a  data-filter=".5">UPCOMING</a></li> -->
+                </ul>
+                <!--/#portfolio-filter-->
+            </div>
+
+            <div class="portfolio-items" >
+                <div ng-repeat="event in events " >
+                    <div class="portfolio-item {{event.type_id}}">
+                        <div class="portfolio-item-inner">
+                            <img class="img-responsive" ng-src="{{event.typeImage}}" alt="" ng-click="open(event.id)">
+
+                            <div class="portfolio-info" ng-click="open(event.id)">
+                                <h3>{{event.title}}</h3>
+                                {{event.pub_date}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        edoijedoiewdoiewdoiowdjqwodewodwqodwq
+        <!--/.container-->
+    </section>
+
+
+    <footer id="footer">  
+    <div appfooter></div>  
+    </footer>
+
+
+    </script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="app.js"></script>
