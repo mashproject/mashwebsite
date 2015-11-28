@@ -130,12 +130,11 @@ app.controller('singlEventCtrl', ['$scope', '$http', '$stateParams',
             });
         }else{
             console.log("data not null");
-            if(data[0].image_url == null){
-                    data[0].image_url = eventsTypeDefaultImages[id]
-                }else{
-                    data[0].image_url = data[0].image_url.replace("https", "http");
-                }
-            eventsData[id].image_url = eventsData[id].image_url.replace("https", "http");
+            if(eventsData[id].image_url == null){
+                    eventsData[id].image_url.image_url = eventsTypeDefaultImages[id]
+            }else{
+                eventsData[id].image_url = eventsData[id].image_url.replace("https", "http");
+            }
             var event = eventsData[id];
             $scope.event = event;
                 console.log({"ids":event.supporters});
