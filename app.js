@@ -17,7 +17,7 @@ app.config(['$stateProvider', '$urlRouterProvider',
             /* PUBLIC PAGES */
             state('events', {
                 url: '^/events/{id:int}',
-                templateUrl: "Event.html",
+                templateUrl: "html/Event.html",
                 controller: 'singlEventCtrl'
             }).
             state('home', {
@@ -27,23 +27,23 @@ app.config(['$stateProvider', '$urlRouterProvider',
             }).
             state('internship', {
                 url: '/internship',
-                templateUrl: 'internship.html'
+                templateUrl: 'html/internship.html'
             }).
             state('team', {
                 url: '/team',
-                templateUrl: 'team.html'
+                templateUrl: 'html/team.html'
             }).
             state('partners', {
                 url: '/partner',
-                templateUrl: 'Partners.html'
+                templateUrl: 'html/Partners.html'
             }).
             state('contributors', {
                 url: '/contributors',
-                templateUrl: 'Contributors.html'
+                templateUrl: 'html/Contributors.html'
             }).
             state('culture', {
                 url: '/culture',
-                templateUrl: 'Culture.html'
+                templateUrl: 'html/Culture.html'
             })
 
 
