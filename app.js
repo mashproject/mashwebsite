@@ -136,9 +136,9 @@ app.controller('singlEventCtrl', ['$scope', '$http', '$stateParams',
             console.log("data not null");
             if(eventsData[id].image_url == null){
                     eventsData[id].image_url.image_url = eventsTypeDefaultImages[id]
-                }else{
-                    eventsData[id].image_url = eventsData[id].image_url.replace("https", "http");
-                }            
+            }else{
+                eventsData[id].image_url = eventsData[id].image_url.replace("https", "http");
+            }
             var event = eventsData[id];
             $scope.event = event;
                 console.log({"ids":event.supporters});
