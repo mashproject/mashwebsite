@@ -15,10 +15,14 @@ app.config(['$stateProvider', '$urlRouterProvider',
         /*$locationProvider.html5Mode(true);*/
         $stateProvider.
             /* PUBLIC PAGES */
-            state('events', {
-                url: '^/events/{id:int}',
-                templateUrl: "Event.html",
+            state('event', {
+                url: '^/event/{id:int}',
+                templateUrl: "html/Event.html",
                 controller: 'singlEventCtrl'
+            }).
+            state('Events', {
+                url: '/Events',
+                templateUrl: "html/Events.html",                
             }).
             state('home', {
                 url: '/',
@@ -27,23 +31,23 @@ app.config(['$stateProvider', '$urlRouterProvider',
             }).
             state('internship', {
                 url: '/internship',
-                templateUrl: 'internship.html'
+                templateUrl: 'html/internship.html'
             }).
             state('team', {
                 url: '/team',
-                templateUrl: 'team.html'
+                templateUrl: 'html/team.html'
             }).
             state('partners', {
                 url: '/partner',
-                templateUrl: 'Partners.html'
+                templateUrl: 'html/Partners.html'
             }).
             state('contributors', {
                 url: '/contributors',
-                templateUrl: 'Contributors.html'
+                templateUrl: 'html/Contributors.html'
             }).
             state('culture', {
                 url: '/culture',
-                templateUrl: 'Culture.html'
+                templateUrl: 'html/Culture.html'
             })
 
 
@@ -88,7 +92,7 @@ app.controller('eventCtrl', ['$scope', '$http', '$state',
         //     console.log($scope.events)
         // }
         $scope.open = function (id) {
-            $state.go('events', {id: id});
+            $state.go('event', {id: id});
         };
     }]);
 
