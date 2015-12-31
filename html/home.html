@@ -388,7 +388,7 @@
             <div class="portfolio-items" >
                 <div ng-repeat="event in events " >
                     <div class="portfolio-item {{event.type_id}}">
-                        <div class="portfolio-item-inner">
+                        <div class="portfolio-item-inner" style="cursor:pointer;">
                             <img class="img-responsive" ng-src="{{event.typeImage}}" alt="" ng-click="open(event.id)">
 
                             <div class="portfolio-info" ng-click="open(event.id)">
