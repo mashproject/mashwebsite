@@ -31,9 +31,6 @@
     margin-right: 30px;
   }
 
-  .guitar {
-    left:0;
-  }
 
   .guitar2 {
     height: 100%
@@ -142,9 +139,7 @@
     padding: 7px 25px;
   }
 
-  #home {
-    margin-top: 10%;
-  }
+
 
   #main-slider .carousel-caption {
     bottom: 17%;
@@ -293,9 +288,7 @@
 
   /* Home */
 
-  #home {
-    margin-top: 18%;
-  }
+ 
 
   .fixed-menu .container {
     width: 100%;
