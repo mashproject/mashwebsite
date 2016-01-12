@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
 <link href="css/animate.min.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">
 <link href="css/event.css" rel="stylesheet">
@@ -62,7 +61,7 @@
     <section id="eventHome">
         <div id="main-slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="item active">
+                <div class="item active" style="background-color:#000;">
                     <img class="img-responsive" src="{{event.image_url}}" alt="slider">
 
                     <div class="carousel-caption">
@@ -78,14 +77,14 @@
     <section id="eventAbout">
         <div class="container">
             <div class="row">
-                <div class="about-content col-md-9">
+                <div class="about-content col-md-9 col-sm-12">
                     <h2>About Event</h2>
 
                     <p>{{event.description}}</em></p>
                     <a class="eventMoreDetails" href="{{event.url}}" target="_blank">More Details<i
                             class="fa fa-angle-right"></i></a>
                 </div>
-                <div class="guitar">
+                <div class="guitar col-md-3">
                     <img class="img-responsive" src="images/about.png" alt="guitar">
                 </div>
             </div>
