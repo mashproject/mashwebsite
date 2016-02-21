@@ -1,19 +1,24 @@
 <?php
-$name       = @trim(stripslashes($_POST['name'])); 
-$from       = @trim(stripslashes($_POST['email']));
-$phone      = @trim(stripslashes($_POST['phone']));  
-$subject    = @trim(stripslashes($_POST['subject'])); 
-$message    = @trim(stripslashes($_POST['message'])); 
-$to   		= 'email@email.com';//replace with your email
+$name = @trim(stripslashes($_POST['name']));
+$from = @trim(stripslashes($_POST['email']));
+$subject = @trim(stripslashes($_POST['subject']));
+$message = @trim(stripslashes($_POST['message']));
+$to = "vipakpawar26@gmail.com";
 
-$headers   = array();
+$mensaje = "Name: $name \nEmail: $from \nAsunto: $subject \nMensaje: $message";
+
+$pagetitle = "New message from the web";
+
+$headers = array();
 $headers[] = "MIME-Version: 1.0";
-$headers[] = "Content-type: text/plain; charset=iso-8859-1";
+$headers[] = "Content-type: text/plain; charset=\"utf-8\"\n";
 $headers[] = "From: {$name} <{$from}>";
 $headers[] = "Reply-To: <{$from}>";
 $headers[] = "Subject: {$subject}";
 $headers[] = "X-Mailer: PHP/".phpversion();
+$headers = implode("\r\n", $headers);
 
-mail($to, $subject, $message, $headers);
+mail($to, $pagetitle, $mensaje, $headers);
 
-die;
+die();
+?>
