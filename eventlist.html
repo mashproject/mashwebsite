@@ -1,0 +1,33 @@
+<header id="header">
+    <div appheader></div>
+    </header>
+<section id="portfolio" ng-controller="eventCtrl">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Events</h2>
+
+                <p class="text-center wow fadeInDown">Purpose of our events is to build right kind of platform for the selected community.</p>
+            </div>
+
+
+            <div class="portfolio-items" >
+                <div ng-repeat="event in events " >
+                    <div class="portfolio-item {{event.type_id}}">
+                        <div class="portfolio-item-inner" style="cursor:pointer;">
+                            <img class="img-responsive" ng-src="{{event.typeImage}}" alt="" ng-click="open(event.id)">
+
+                            <div class="portfolio-info" ng-click="open(event.id)">
+                                <h3>{{event.title}}</h3>
+                                {{event.pub_date}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.container-->
+    </section>
+    <!--/#portfolio-->
+<footer id="footer">
+    <div appfooter></div>
+</footer>

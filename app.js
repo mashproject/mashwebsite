@@ -33,6 +33,10 @@ app.config(['$stateProvider', '$urlRouterProvider',
                 url: '/team',
                 templateUrl: 'team.html'
             }).
+            state('eventlist', {
+                url: '/events',
+                templateUrl: 'eventlist.html'
+            }).
             state('partners', {
                 url: '/partner',
                 templateUrl: 'Partners.html'
